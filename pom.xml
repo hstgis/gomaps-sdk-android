@@ -1,28 +1,75 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <!-- Metadata -->
     <groupId>com.gomaps.sdk</groupId>
     <artifactId>gomaps-sdk</artifactId>
     <version>1.0.1</version>
-    <name>gomaps-sdk</name>
     <packaging>aar</packaging>
+    <name>gomaps-sdk</name>
+
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- OkHttp Core -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.9.1</version>
+        </dependency>
+
+        <!-- Optional: OkHttp Logging Interceptor (for debugging HTTP requests) -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>logging-interceptor</artifactId>
+            <version>4.9.1</version>
+        </dependency>
+
+        <!-- Mapbox GeoJSON -->
+        <dependency>
+            <groupId>com.mapbox.mapboxsdk</groupId>
+            <artifactId>mapbox-sdk-geojson</artifactId>
+            <version>5.9.0</version>
+        </dependency>
+
+        <!-- Mapbox Turf -->
+        <dependency>
+            <groupId>com.mapbox.mapboxsdk</groupId>
+            <artifactId>mapbox-sdk-turf</artifactId>
+            <version>5.9.0</version>
+        </dependency>
+
+        <!-- Mapbox Gestures -->
+        <dependency>
+            <groupId>com.mapbox.mapboxsdk</groupId>
+            <artifactId>mapbox-android-gestures</artifactId>
+            <version>0.7.0</version>
+        </dependency>
+    </dependencies>
+
+    <!-- Build Configuration -->
     <build>
         <plugins>
-        <plugin>
-            <groupId>com.simpligility.maven.plugins</groupId>
-            <artifactId>android-maven-plugin</artifactId>
-            <version>4.1.0</version>
-            <extensions>true</extensions>
-            <configuration>
-            <encoding>utf8</encoding>
-            <source>1.8</source>
-            <target>1.8</target>
-            <sign>
-                <debug>false</debug>
-            </sign>
-            </configuration>
-        </plugin>
+            <!-- Plugin for packaging .aar files -->
+            <plugin>
+                <groupId>com.simpligility.maven.plugins</groupId>
+                <artifactId>android-aar-plugin</artifactId>
+                <version>3.10.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <aar>true</aar>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
+    <!-- Repositories -->
+    <repositories>
+        <!-- Maven Central -->
+        <repository>
+            <id>maven-central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
 </project>
