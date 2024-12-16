@@ -55,10 +55,15 @@
             <plugin>
                 <groupId>com.simpligility.maven.plugins</groupId>
                 <artifactId>android-aar-plugin</artifactId>
-                <version>3.10.0</version>
+                <version>4.1.0</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <aar>true</aar>
+                <encoding>utf8</encoding>
+                <source>1.8</source>
+                <target>1.8</target>
+                <sign>
+                <debug>false</debug>
+                </sign>
                 </configuration>
             </plugin>
         </plugins>
