@@ -43,6 +43,14 @@
             <artifactId>mapbox-android-gestures</artifactId>
             <version>0.7.0</version>
         </dependency>
+        
+        <!-- Timber-->
+        <dependency>
+            <groupId>com.jakewharton.timber</groupId>
+            <artifactId>timber</artifactId>
+            <version>5.0.1</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
