@@ -4,9 +4,54 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.gomaps.sdk</groupId>
     <artifactId>gomaps-sdk</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.1</version>
     <name>gomaps-sdk</name>
     <packaging>aar</packaging>
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- OkHttp Core -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.9.1</version>
+        </dependency>
+
+        <!-- Optional: OkHttp Logging Interceptor (for debugging HTTP requests) -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>logging-interceptor</artifactId>
+            <version>4.9.1</version>
+        </dependency>
+
+        <!-- Maplibre GeoJSON -->
+        <dependency>
+            <groupId>org.maplibre.gl</groupId>
+            <artifactId>android-sdk-geojson</artifactId>
+            <version>5.9.0</version>
+        </dependency>
+
+        <!-- Maplibre Turf -->
+        <dependency>
+            <groupId>org.maplibre.gl</groupId>
+            <artifactId>android-sdk-turf</artifactId>
+            <version>5.9.0</version>
+        </dependency>
+
+        <!-- Mapbox Gestures -->
+        <dependency>
+            <groupId>com.mapbox.mapboxsdk</groupId>
+            <artifactId>mapbox-android-gestures</artifactId>
+            <version>0.7.0</version>
+        </dependency>
+        
+        <!-- Timber-->
+        <dependency>
+            <groupId>com.jakewharton.timber</groupId>
+            <artifactId>timber</artifactId>
+            <version>5.0.1</version>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
         <plugin>
@@ -25,4 +70,12 @@
         </plugin>
         </plugins>
     </build>
+    <!-- Repositories -->
+    <repositories>
+        <!-- Maven Central -->
+        <repository>
+            <id>maven-central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
 </project>
