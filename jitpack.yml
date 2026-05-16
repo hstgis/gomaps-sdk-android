@@ -1,2 +1,4 @@
 jdk:
-  - openjdk17
+  - openjdk11
+install:
+  - mvn install:install-file -Dfile=GoMapGLAndroidSDK-1.1.1-release.aar -DgroupId=com.github.hstgis -DartifactId=gomaps-sdk-android -Dversion=1.1.2 -Dpackaging=aar -DgeneratePom=true
